@@ -1,0 +1,41 @@
+<h1>Users#index</h1>
+<p>Find me in app/views/users/index.html.erb</p>
+<%= will_paginate %>
+<h1>Listing Users</h1>
+<div class="panel panel-default">
+  <div class="panel-heading">Listing Users</div>
+  <table class="table table-striped table-bordered table-hover">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Last Name</th>
+      <th>First Name</th>
+      <th>Email</th>
+      <th colspan="5"></th>
+    </tr>
+  </thead>
+ 
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.id %></td>
+         <td><%= user.last_name %></td>
+        <td><%= user.first_name %></td>
+        <td><%= user.email %></td>
+    
+        <div class="ui center">
+        <td><div class="ui buttons">
+        <button class="ui positive button"><%= link_to 'Show', user %></button>
+          <div class="or"></div>
+        <button class="ui button"><%= link_to 'Edit', edit_user_path(user) %></button>
+        <div class="or"></div>
+        <button class="ui negative button"><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
+        </div>
+      </tr>
+    <% end %>
+  </tbody>
+ 
+</table>
+  </div>
+  <%= will_paginate %>
+<br>

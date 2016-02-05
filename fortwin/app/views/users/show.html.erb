@@ -1,0 +1,22 @@
+<h1>Users#show</h1>
+<p>Find me in app/views/users/show.html.erb</p>
+
+
+<div class= "profile">
+<div class="ui link card">
+  <div class="image"><img src="http://lorempixel.com/200/200/people/"></div>
+  <div class="content">
+    <a class="header"><%= @user.first_name  %> <%= @user.last_name  %></a>
+    <div class="meta"><span class="date">Joined in <%= @user.created_at.year %></span></div>
+    <div class="description"><%= @user.postal_adress %></div>
+  </div>
+  <div class="extra content"><a><i class="user icon"></i><%= @user.email  %></a></div>
+</div>
+</div>
+
+<% @products.each do |product| %>
+	<tr>
+	<td><%= product.title %></td>
+	</tr>
+	<% end %>
+

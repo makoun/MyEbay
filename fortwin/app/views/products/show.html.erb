@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class= "profile">
+<div class="ui link card">
+  <div class="image">
+    <img src="http:/lorempixel.com/200/200/technics/">
+  </div>
+  <div class="content">
+    <a class="header"><%= @product.title  %></a>
+    <div class="meta">
+      <span class="date">Added in <%= @product.created_at %></span>
+    </div>
+    <div class="description">
+      <%= @product.description %>
+    </div>
+    </div>
+ 
+  <div class="extra content">
+    <a>
+      <i class="euro icon"></i>
+      <%= @product.price  %>
+    </a>
+  </div>
+  
+</div>
+</div>
+
